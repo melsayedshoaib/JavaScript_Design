@@ -118,12 +118,7 @@ colorsLi.forEach((li) => {
       e.target.dataset.color
     );
     localStorage.setItem("color_option", e.target.dataset.color);
-    // Remove Active Class From All Children
-    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
-      element.classList.remove("active");
-    });
-    // Add Active Class On Target
-    e.target.classList.add("active");
+    handleActive(e);
   });
 });
 
@@ -135,12 +130,7 @@ const randomBackEl = Array.from(
 
 randomBackEl.forEach((span) => {
   span.addEventListener("click", (e) => {
-    // Remove Active Class From All Children
-    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
-      element.classList.remove("active");
-    });
-    // Add Active Class On Target
-    e.target.classList.add("active");
+    handleActive(e);
     if (e.target.dataset.background === "yes") {
       backgroundOption = true;
       randomizeImgs();
@@ -268,3 +258,14 @@ function scrollToASection(elements) {
 
 scrollToASection(allBullets);
 scrollToASection(allLinks);
+
+// Handle Active State
+
+function handleActive(ev) {
+  // Remove Active Class From All Children
+  ev.target.parentElement.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  // Add Active Class On Target
+  ev.target.classList.add("active");
+}
