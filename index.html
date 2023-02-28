@@ -42,12 +42,13 @@
                 </div>
             </div>
             <div class="option-box">
-                <h4>Testing Option</h4>
-                <div class="testing-option">
-                    <span class="yes active" data-background="yes">Yes</span>
-                    <span class="no" data-background="no">No</span>
+                <h4>Show Bullets</h4>
+                <div class="bullets-option">
+                    <span class="yes active" data-display="show">Yes</span>
+                    <span class="no" data-display="hide">No</span>
                 </div>
             </div>
+            <button class="reset-options">Reset Options</button>
         </div>
     </div>
     <!-- End Settings Box -->
@@ -71,6 +72,9 @@
         <div class="bullet" data-section=".testimonials">
             <div class="tooltip">Testimonials</div>
         </div>
+        <div class="bullet" data-section=".contact">
+            <div class="tooltip">Contact Us</div>
+        </div>
     </div>
     <!-- End Nav Bullets -->
     <!-- Start Landing Page -->
@@ -78,14 +82,22 @@
         <div class="overlay"></div>
         <div class="header-area">
             <div class="logo">JavaScript Design</div>
-            <ul class="links">
-                <li><a href="#" class="active" data-section=".about-us">About</a></li>
-                <li><a href="#" data-section=".skills">Skills</a></li>
-                <li><a href="#" data-section=".gallery">Gallery</a></li>
-                <li><a href="#" data-section=".timeline">Timeline</a></li>
-                <li><a href="#" data-section=".features">Features</a></li>
-                <li><a href="#" data-section=".testimonials">Testimonials</a></li>
-            </ul>
+            <div class="links-container">
+                <ul class="links">
+                    <li><a href="#" class="active" data-section=".about-us">About</a></li>
+                    <li><a href="#" data-section=".skills">Skills</a></li>
+                    <li><a href="#" data-section=".gallery">Gallery</a></li>
+                    <li><a href="#" data-section=".timeline">Timeline</a></li>
+                    <li><a href="#" data-section=".features">Features</a></li>
+                    <li><a href="#" data-section=".testimonials">Testimonials</a></li>
+                    <li><a href="#" data-section=".contact">Contact Us</a></li>
+                </ul>
+                <button class="toggle-menu" title="Open Links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
         <div class="introduction-text">
             <h1>We Are <span>Creative</span> Agency</h1>
@@ -285,7 +297,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum praesentium omnis quis amet molestiae,
                 dolor</p>
                 <div class="person-info">
-                    <img src="https://placehold.it/80/DDD" alt="testi 1">
+                    <img src="imgs/client-3.png" alt="testi 1">
                     <h4>John Doe</h4>
                     <p>CEO At Company</p>
                 </div>
@@ -294,7 +306,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum praesentium omnis quis amet molestiae,
                     dolor</p>
                 <div class="person-info">
-                    <img src="https://placehold.it/80/EEE" alt="testi 1">
+                    <img src="imgs/client-6.png" alt="testi 1">
                     <h4>John Doe</h4>
                     <p>CEO At Company</p>
                 </div>
@@ -303,7 +315,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum praesentium omnis quis amet molestiae,
                     dolor</p>
                 <div class="person-info">
-                    <img src="https://placehold.it/80/AAA" alt="testi 1">
+                    <img src="imgs/client-9.png" alt="testi 1">
                     <h4>John Doe</h4>
                     <p>CEO At Company</p>
                 </div>
@@ -312,6 +324,31 @@
         <div class="clearfix"></div>
     </div>
     <!-- End Testimonials -->
+    <!-- Start Contact Us -->
+    <div class="contact">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div class="left">
+                    <input type="text" placeholder="Your Name" name="username">
+                    <input type="number" placeholder="Your Phone" name="phone">
+                    <input type="email" placeholder="Your Email" name="email">
+                    <input type="text" placeholder="Subject" name="subject">
+                </div>
+                <div class="right">
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact Us -->
+    <!-- Start Footer -->
+    <div class="footer">
+        Made With Love By Muhammad Shoaib
+    </div>
+    <!-- End Footer -->
     <script src="js/main.js"></script>
 </body>
 
