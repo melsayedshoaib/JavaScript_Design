@@ -237,10 +237,16 @@ body {
 }
 
 .header-area {
-    position: relative;
+    position: fixed;
     z-index: 3;
     color: #fff;
     display: flex;
+    width: 100%;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .header-area .logo {
