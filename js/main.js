@@ -339,3 +339,18 @@ document.addEventListener("click", (e) => {
 tLinks.onclick = function (e) {
   e.stopPropagation();
 };
+
+// Changing Nav Background On Scrolling Using jQuery
+
+let { top: aboutSection } = $("#about").offset();
+console.log(aboutSection);
+
+$(window).scroll(() => {
+  let windowOffset = $(window).scrollTop();
+  if (windowOffset >= aboutSection - 100) {
+    $(".header-area").css("background-color", "rgba(0,0,0,0.9)");
+  } else {
+    $(".header-area").css("background-color", "transparent");
+  }
+});
+
