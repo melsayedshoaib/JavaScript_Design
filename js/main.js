@@ -362,3 +362,12 @@ $("#backToTop").click(() => {
   $("html, body").animate({ scrollTop: 0 }, 1000);
 });
 
+// Document Ready
+
+$(document).ready(() => {
+  $("#loading .sk-chase").fadeOut(1000, () => {
+    $("#loading").fadeOut(500);
+    $("body").css("overflow", "auto");
+  });
+});
+
