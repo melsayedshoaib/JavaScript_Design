@@ -349,8 +349,16 @@ $(window).scroll(() => {
   let windowOffset = $(window).scrollTop();
   if (windowOffset >= aboutSection - 100) {
     $(".header-area").css("background-color", "rgba(0,0,0,0.9)");
+    $("#backToTop").fadeIn(500);
   } else {
     $(".header-area").css("background-color", "transparent");
+    $("#backToTop").fadeOut(500);
   }
+});
+
+// BackTo Top On Clicking
+
+$("#backToTop").click(() => {
+  $("html, body").animate({ scrollTop: 0 }, 1000);
 });
 
